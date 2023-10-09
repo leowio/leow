@@ -3,8 +3,8 @@
   "version": "2.3.0",
   "private": false,
   "scripts": {
-    "dev": "astro check --watch & astro dev",
-    "start": "astro dev",
+    "dev": "astro check --watch & astro dev --port 3005",
+    "start": "astro dev --port 3005",
     "build": "astro build && jampack ./dist",
     "preview": "astro preview",
     "sync": "astro sync",

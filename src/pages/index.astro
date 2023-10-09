@@ -15,6 +15,9 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const projectPosts = sortedPosts.filter(({ data }) =>
+  data.tags.includes("project")
+);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -23,7 +26,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>Hi I'm Leo Wang</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -41,19 +44,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
-        Read the blog posts or check
-        <LinkButton
+        A Web/Game Developer/Designer, currently living in Shanghai, and
+        studying as a CS student <LinkButton
           className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="https://shanghai.nyu.edu/"
         >
-          README
-        </LinkButton> for more info.
+          @NYU Shanghai
+        </LinkButton>. Working <LinkButton
+          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+          href="https://www.knn3.xyz/"
+        >
+          @KNN3 Network
+        </LinkButton>.
       </p>
       {
         // only display if at least one social link is enabled
@@ -75,6 +77,26 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <h2>Featured</h2>
             <ul>
               {featuredPosts.map(({ data }) => (
+                <Card
+                  href={`/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          <Hr />
+        </>
+      )
+    }
+
+    {
+      projectPosts.length > 0 && (
+        <>
+          <section id="project">
+            <h2>Projects</h2>
+            <ul>
+              {projectPosts.map(({ data }) => (
                 <Card
                   href={`/posts/${slugify(data)}`}
                   frontmatter={data}
@@ -146,10 +168,12 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
+  #project,
   #recent-posts {
     @apply pb-6 pt-12;
   }
   #featured h2,
+  #project h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
