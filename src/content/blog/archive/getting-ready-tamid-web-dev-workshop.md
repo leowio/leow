@@ -31,14 +31,15 @@ Today, web development continues to evolve with the increasing popularity of web
 
 ### What will we cover on the workshop?
 
-- Understands How the Web works
-- Learn tools that make web development easier
-  - Emmet
-  - Node.js and npm
-  - Tailwind CSS
-- Learn how to deploy a website
-  - GitHub Pages
-- Build a little interactive web app w what we learned
+- Web basic review
+  - HTML
+  - CSS
+  - JavaScript
+- How the modern web works
+  - Rendering pattern
+  - Server? Client?
+  - Module bundler
+- Svelte basics
 
 ### Readings to prepare yourself for the Workshop
 
@@ -53,3 +54,7 @@ The way I recommend going through the MDN tutorial:
 - Then learn [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - Then, [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 - Finally, [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+
+### Short videos for you to watch
+
+[TAMID web dev playlist](https://youtube.com/playlist?list=PLaHjs_MtGhKnmWeLusXEziLwJV_4X0WvF&si=Ok4ug2n1E3CmNGXQ)
