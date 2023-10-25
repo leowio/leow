@@ -39,7 +39,7 @@ Today, web development continues to evolve with the increasing popularity of web
   - Rendering pattern
   - Server? Client?
   - Module bundler
-- Svelte basics
+- Nextjs basics
 
 ### Readings to prepare yourself for the Workshop
 
