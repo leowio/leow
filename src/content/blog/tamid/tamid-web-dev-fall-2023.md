@@ -1,14 +1,14 @@
 ---
 author: Leo Wang
 pubDatetime: 2023-10-26
-title: TAMID Web Dev Workshop
+title: Introduction to Web Development
 postSlug: tamid-web-dev-2023-fall
 featured: false
 draft: false
 tags:
   - university
   - tamid
-ogImage: ""
+  - web dev
 description: The web dev workshop in fall 2023
 ---
 

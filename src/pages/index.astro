@@ -90,26 +90,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    {
-      projectPosts.length > 0 && (
-        <>
-          <section id="project">
-            <h2>Projects</h2>
-            <ul>
-              {projectPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
-
     <section id="recent-posts">
       <h2>Recent Posts</h2>
       <ul>
@@ -137,18 +117,39 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </LinkButton>
       </div>
     </section>
+
+    <Hr />
+
+    {
+      projectPosts.length > 0 && (
+        <>
+          <section id="project">
+            <h2>Projects</h2>
+            <ul>
+              {projectPosts.map(({ data }) => (
+                <Card
+                  href={`/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+        </>
+      )
+    }
   </main>
 
-  <Footer />
+  <Footer noMarginTop />
 </Layout>
 
 <style>
   /* ===== Hero Section ===== */
   #hero {
-    @apply pb-6 pt-8;
+    @apply my-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply inline-block text-3xl font-bold sm:text-5xl;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -168,16 +169,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
-  #project,
-  #recent-posts {
-    @apply pb-6 pt-12;
+  #recent-posts,
+  #project {
+    @apply py-8;
   }
+
+  #project {
+    @apply pb-4;
+  }
+
   #featured h2,
   #project h2,
   #recent-posts h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+    @apply mt-8 text-center;
   }
 </style>

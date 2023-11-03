@@ -9,7 +9,6 @@ tags:
   - archive
   - university
   - cc-lab
-ogImage: ""
 ---
 
 ## Hi, this is Leo Wong _aka ImPrankster_

@@ -9,7 +9,6 @@ tags:
   - archive
   - university
   - cc-lab
-ogImage: ""
 ---
 
 ### Check out my work [here](https://editor.p5js.org/ImPrankster/sketches/5x578DiXM)

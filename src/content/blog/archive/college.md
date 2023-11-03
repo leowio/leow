@@ -9,7 +9,6 @@ tags:
   - archive
   - university
   - cc-lab
-ogImage: ""
 ---
 
 ## Check out my work [here](https://imprankster.github.io/cclab-final/)

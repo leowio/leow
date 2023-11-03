@@ -8,7 +8,6 @@ draft: false
 tags:
   - university
   - interaction-lab
-ogImage: ""
 description: Presentation for interaction lab on fall 2023
 ---
 

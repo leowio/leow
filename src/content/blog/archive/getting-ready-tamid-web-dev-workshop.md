@@ -7,7 +7,6 @@ featured: false
 draft: false
 tags:
   - archive
-ogImage: ""
 description: Getting ready for the web dev workshop
 ---
 

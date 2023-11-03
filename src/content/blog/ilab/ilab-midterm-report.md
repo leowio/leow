@@ -8,7 +8,6 @@ draft: false
 tags:
   - university
   - interaction-lab
-ogImage: ""
 description: Interaction Lab midterm project documentation
 ---
 
