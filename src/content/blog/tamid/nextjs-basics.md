@@ -1,7 +1,7 @@
 ---
 pubDatetime: 2023-11-03
 title: Hands on with Next.js
-postSlug: nextjs-workshop-2-p
+postSlug: nextjs-basics
 tags:
   - nextjs
   - web dev
