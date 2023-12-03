@@ -7,7 +7,6 @@ featured: false
 draft: false
 tags:
   - project
-ogImage: ""
 description: In this project I built a web app prototype for the L'Oreal student challenge
 ---
 
