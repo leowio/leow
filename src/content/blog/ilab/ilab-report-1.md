@@ -28,7 +28,7 @@ My teammates spent a lot of time on building the beautiful wing, they carefully 
 <iframe
   src="https://res.cloudinary.com/leow/video/upload/v1695791444/blog/jj8dgk0irphzsym1juxx.mp4"
   width="640"
-  height="360" 
+  height="360"
   style="height: auto; width: 100%; aspect-ratio: 640 / 360;"
   allow="fullscreen; encrypted-media; picture-in-picture"
   allowfullscreen
