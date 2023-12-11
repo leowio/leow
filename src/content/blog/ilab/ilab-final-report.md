@@ -27,13 +27,13 @@ The goal is to make the user feel like they are observing a real biome of microo
 
 ## Design
 
-The main part of the design is a large box to house the laptop. I spent a lot of time on how to make the computer "invisible" to the audience. Obviously I have to use processing to display the game of life, but I don't want it just to be a laptop to a bunch of controls. I explored a bunch of options, like projectors, external displays, or mirrors and optics, but surprisingly the simplest solution works the best, I just built a case for my laptop and a laser-cut cylinder to look into the screen as if it's a real microscope.
+The main part of the design is a large box to house the laptop. I spent a lot of time on how to make the computer "invisible" to the player. Obviously I have to use processing to display the game of life, but I don't want it just to be a laptop to a bunch of controls. I explored a bunch of options, like projectors, external displays, or mirrors and optics, but surprisingly the simplest solution works the best - I just built a case for my laptop and a laser-cut cylinder to look into the screen.
 
 ![Laser cutting process](https://res.cloudinary.com/leow/image/upload/f_auto,q_auto/v1/blog/qshex8sgvwtldcm3knj4)
 
-The audience can use the buttons on the device to pan the canvas, and the knob to zoom in and out, just like on a real microscope.
+The player can use the buttons on the device to pan the canvas, and the knob to zoom in and out, just like on a real microscope.
 
-The sign on top has the logo and some common "creatures" in the Game of Life Universe the audience can look for.
+The sign on top is also made by the laser cutter and has the logo and some common "creatures" in the Game of Life Universe the player can look for.
 
 ![Life LOGO](https://res.cloudinary.com/leow/image/upload/f_auto,q_auto/v1/blog/t9mywdciti3dff55vozi)
 
@@ -44,3 +44,7 @@ The whole "petri dish" is essentially a giant 2D array which is calculated and u
 ![Code](https://res.cloudinary.com/leow/image/upload/v1702139646/Screenshot_2023-12-10_at_00.33.30_zdevw5.png)
 
 To make the visual and audio more pleasing, I added the beeping sound in the background that changes the pitch based on how many cells are on the whole board. I also made the cells "blink" different shade of colors to be more lively.
+
+## Improvements
+
+There are some functionalities I can implement to make the project more interactive, such like making the player able to "draw" on the canvas to better observe how the "creatures" interact with each other. However, because of how the board is rendered on the screen, it's hard to implement such a feature. Also, there can be more audio & visual improvements like making the different kind of creatures have different colors and play different sounds. The fabrication of the outer shell of the device can also be improved by laser cutting more parts so that it can be more sturdy.
