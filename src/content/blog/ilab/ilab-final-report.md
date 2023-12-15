@@ -48,3 +48,9 @@ To make the visual and audio more pleasing, I added the beeping sound in the bac
 ## Improvements
 
 There are some functionalities I can implement to make the project more interactive, such like making the player able to "draw" on the canvas to better observe how the "creatures" interact with each other. However, because of how the board is rendered on the screen, it's hard to implement such a feature. Also, there can be more audio & visual improvements like making the different kind of creatures have different colors and play different sounds. The fabrication of the outer shell of the device can also be improved by laser cutting more parts so that it can be more sturdy.
+
+## Cleanup
+
+![Image](https://res.cloudinary.com/leow/image/upload/f_auto,q_auto/v1/blog/hkhhouzfq5qxordjdx6z)
+
+It's fully disassembled and disposed.
