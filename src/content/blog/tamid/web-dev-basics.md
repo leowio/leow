@@ -8,6 +8,7 @@ draft: false
 tags:
   - university
   - tamid
+  - workshop
   - web dev
 description: The web dev workshop in fall 2023
 ---
