@@ -13,8 +13,17 @@ const { activeNav } = Astro.props;
 <header>
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
+    <div
+      class="mx-4 place-self-stretch bg-gradient-to-r from-[#5BCEFA] to-[#F5A9B8] px-2 font-medium text-skin-inverted"
+    >
+      Celebrating pride month 2024!
+    </div>
     <div class="top-nav-wrap">
-      <a href="/" class="logo">{SITE.title}</a>
+      <a href="/" class="logo shrink-0">
+        <span>
+          {SITE.title}
+        </span>
+      </a>
       <nav id="nav-menu">
         <button
           class="hamburger-menu focus-outline"
@@ -107,7 +116,7 @@ const { activeNav } = Astro.props;
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
   .nav-container {
-    @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
+    @apply mx-auto flex max-w-3xl flex-col items-center justify-between;
   }
   .top-nav-wrap {
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
