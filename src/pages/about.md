@@ -3,12 +3,12 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-## Hi, I'm Leo Wang
+## Hi, I'm Ruofan Wang (Goes by Leo as well)
 
-I'm a uni student living in Shanghai. I enjoy web development and also graphic and interface design. This blog is for documenting various stuff I'm working on as well as sharing random thoughts. I had two blog websites previously and all the blogs are ported to this one. To view the archived website, visit: [ImPrankster's personal blog](https://imprankster.vercel.app) [Leo Wang's personal blog](https://im-leo-wang.vercel.app). You can find me on GitHub as well as LinkedIn.
+I'm a CS student studying at NYU. I do web development and also graphic & interface design. I'm a huge transit nerd and loves travelling to different cities. I love playing video games (I play indie action RPG/FPS/anything with a chill vibe). This blog is for documenting various stuff I'm working on as well as sharing random thoughts.
 
-## My Tech Stack
+Things I'm learning: Typography Design, Mobile Development (With Native Swift on iOS & React Native), German
 
-### Web Dev
+Find me on [Bluesky](https://bsky.app/profile/leow.io), [GitHub](https://github.com/ImPrankster)
 
-My preferred language for Web dev is TypeScript. My go-to framework is Next.js, it's powerful, well-supported, and getting better every day. I also like Solid and Svelte. For static sites I use Astro (including this blog). Tailwind CSS is also one thing I absolutely love and use a lot. The various service provider I use are Vercel for serverless deployment (GOATed), PlanetScale / Supabase for db, and Clerk for user auth.
+Language: English, Mandarin Chinese

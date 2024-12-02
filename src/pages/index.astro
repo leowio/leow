@@ -15,9 +15,6 @@ const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const projectPosts = sortedPosts.filter(({ data }) =>
-  data.tags.includes("project")
-);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -106,27 +103,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </LinkButton>
       </div>
     </section>
-
-    <Hr />
-
-    {
-      projectPosts.length > 0 && (
-        <>
-          <section id="project">
-            <h2>Projects</h2>
-            <ul>
-              {projectPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-        </>
-      )
-    }
   </main>
 
   <Footer noMarginTop />

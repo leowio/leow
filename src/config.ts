@@ -7,22 +7,22 @@ export const SITE: Site = {
   title: "leow.io",
   ogImage: "og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 4,
 };
 
-export const LOCALE = ["en-EN"]; // set to [] to use the environment default
+export const LOCALE = ["en-EN"];
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/ImPrankster",
-    linkTitle: ` ${SITE.title} on Github`,
+    name: "Bluesky",
+    href: "https://bsky.app/profile/leow.io",
+    linkTitle: `${SITE.title} on Bluesky`,
     active: true,
   },
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/leo-wang-585a6624a/",
-    linkTitle: `${SITE.title} on LinkedIn`,
+    name: "Github",
+    href: "https://github.com/ImPrankster",
+    linkTitle: `${SITE.title} on Github`,
     active: true,
   },
   {
