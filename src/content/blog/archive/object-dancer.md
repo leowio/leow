@@ -71,7 +71,7 @@ class LeoDancer {
       this.armArr[4],
       this.armArr[5],
       this.armArr[6],
-      this.armArr[7]
+      this.armArr[7],
     );
     bezier(
       this.bodyArr[0],
@@ -81,7 +81,7 @@ class LeoDancer {
       this.bodyArr[4],
       this.bodyArr[5],
       this.bodyArr[6],
-      this.bodyArr[7]
+      this.bodyArr[7],
     );
     bezier(
       this.leftFootArr[0],
@@ -91,7 +91,7 @@ class LeoDancer {
       this.leftFootArr[4],
       this.leftFootArr[5],
       this.leftFootArr[6],
-      this.leftFootArr[7]
+      this.leftFootArr[7],
     );
     bezier(
       this.rightFootArr[0],
@@ -101,7 +101,7 @@ class LeoDancer {
       this.rightFootArr[4],
       this.rightFootArr[5],
       this.rightFootArr[6],
-      this.rightFootArr[7]
+      this.rightFootArr[7],
     );
     circle(cos(this.ang * 0.5) * 5, -45, 50);
 

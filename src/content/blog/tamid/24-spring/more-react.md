@@ -27,7 +27,7 @@ Let's break it down step by step:
 <input
   type="text"
   placeholder="Add a todo"
-  onChange={event => {
+  onChange={(event) => {
     /** Do something here **/
     // event.target.value will give you the value of the input
   }}
@@ -46,7 +46,7 @@ Let's break it down step by step:
 setTodoArr(
   todoArr.filter((_, todoIndex) => {
     return todoIndex !== index;
-  })
+  }),
 );
 ```
 

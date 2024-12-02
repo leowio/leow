@@ -41,7 +41,7 @@ function draw() {
   text(
     "' " + ">" + "'",
     355,
-    210 + sin(ang) * 5 + noise(14 + frameCount / 10) * 15
+    210 + sin(ang) * 5 + noise(14 + frameCount / 10) * 15,
   );
   ang += 0.07;
 }

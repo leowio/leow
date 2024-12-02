@@ -366,7 +366,7 @@ Here we will use map to create list of `FrameworkCard` components.
 
 ```jsx
 <div className="framework-grid">
-  {Frameworks.map(framework => (
+  {Frameworks.map((framework) => (
     <FrameworkCard
       key={framework.name}
       name={framework.name}

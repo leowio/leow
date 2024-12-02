@@ -52,7 +52,7 @@ let colorfulLine = () => {
 
 let drawUpdate = () => {};
 
-let showIns = w => {
+let showIns = (w) => {
   fill(255);
   strokeWeight(2);
   stroke(0);
@@ -65,21 +65,21 @@ let showIns = w => {
       ? "> " + "D - Normal drawing mode"
       : "" + "D - Normal drawing mode",
     30,
-    height - 55
+    height - 55,
   );
   text(
     w === "x"
       ? "> " + "X - Draw colorful lines!"
       : "" + "X - Draw colorful lines!",
     30,
-    height - 40
+    height - 40,
   );
   text(w === "e" ? "> " + "E - Eraser" : "" + "E - Eraser", 30, height - 25);
   fill(0, 75, 75);
   text(
     w === "c" ? "> " + "C - Clear all!" : "" + "C - Clear all!",
     30,
-    height - 10
+    height - 10,
   );
 };
 

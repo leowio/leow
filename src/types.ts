@@ -41,3 +41,10 @@ export type SocialMedia =
   | "Telegram"
   | "Mastodon"
   | "Bluesky";
+
+export type Project = {
+  title: string;
+  desc: string;
+  tech: string[];
+  href: string;
+};

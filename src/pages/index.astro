@@ -16,7 +16,7 @@ const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+const socialCount = SOCIALS.filter((social) => social.active).length;
 ---
 
 <Layout>
@@ -41,7 +41,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        Loves Developing & Designing Software, living in New York, a CS student @NYU
+        Loves Developing & Designing Software, living in New York, a CS student
+        @NYU
       </p>
       {
         // only display if at least one social link is enabled
@@ -88,7 +89,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                   frontmatter={data}
                   secHeading={false}
                 />
-              )
+              ),
           )
         }
       </ul>

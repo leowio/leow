@@ -43,7 +43,7 @@ function setup() {
         cos(ang1 * r3) * 150 * abs(cos(ang2 * r4)) +
           height / 2 +
           sin(ang2) * 10,
-        3 * abs(sin(ang2))
+        3 * abs(sin(ang2)),
       );
     }
   }

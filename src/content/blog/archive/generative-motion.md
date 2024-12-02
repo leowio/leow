@@ -30,7 +30,7 @@ let atom = (r1, r2) => {
   circle(
     map(sin(ang + r1), -1, 1, 50, width - 50),
     map(cos(ang + r2), -1, 1, 50, height - 50),
-    20
+    20,
   );
 };
 
@@ -56,7 +56,7 @@ function draw() {
   noStroke();
   fill(255);
   circle(width / 2, height / 2, map(sin(ang * 0.5), -1, 1, 100, 125));
-  randomArr.forEach(a => {
+  randomArr.forEach((a) => {
     atom(a[0], a[1]);
   });
   ang += 0.05;

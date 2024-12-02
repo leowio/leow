@@ -22,11 +22,11 @@ const {
 
 const socialImageURL = new URL(
   ogImage ? ogImage : SITE.ogImage,
-  Astro.url.origin
+  Astro.url.origin,
 ).href;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
