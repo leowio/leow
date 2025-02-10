@@ -13,12 +13,12 @@ export const SITE: Site = {
 export const LOCALE = ["en-EN"];
 
 export const SOCIALS: SocialObjects = [
-  {
-    name: "Bluesky",
-    href: "https://bsky.app/profile/leow.io",
-    linkTitle: `${SITE.title} on Bluesky`,
-    active: true,
-  },
+  // {
+  //   name: "Bluesky",
+  //   href: "https://bsky.app/profile/leow.io",
+  //   linkTitle: `${SITE.title} on Bluesky`,
+  //   active: true,
+  // },
   {
     name: "Github",
     href: "https://github.com/ImPrankster",

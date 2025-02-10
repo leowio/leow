@@ -42,10 +42,16 @@ const next = pageNum < totalPages ? "" : "disabled";
           className={`mr-4 select-none ${prev}`}
           ariaLabel="Previous"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class={`${prev}-svg`}>
-            <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            class={`${prev}-svg`}
+          >
+            <path
+              fill="currentColor"
+              d="M3 6h1V5h3V4H4V3H3v1H2v1h1ZM1 8h1V7H1ZM0 7h1V2H0Zm2 2h5V8H2Zm2-2h1V6H4ZM1 2h1V1H1Zm6 6h1V7H7ZM4 3h1V2H4ZM2 1h5V0H2Zm6 6h1V2H8ZM7 2h1V1H7Zm0 0"
+            />
           </svg>
-          Prev
         </LinkButton>
         <LinkButton
           disabled={next === "disabled"}
@@ -53,9 +59,15 @@ const next = pageNum < totalPages ? "" : "disabled";
           className={`ml-4 select-none ${next}`}
           ariaLabel="Next"
         >
-          Next
-          <svg xmlns="http://www.w3.org/2000/svg" class={`${next}-svg`}>
-            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            class={`${next}-svg`}
+          >
+            <path
+              fill="currentColor"
+              d="M5 6H4v1h1Zm0 0h1V5h1V4H6V3H5v1H2v1h3ZM1 8h1V7H1ZM0 7h1V2H0Zm2 2h5V8H2ZM1 2h1V1H1Zm6 6h1V7H7ZM4 3h1V2H4ZM2 1h5V0H2Zm6 6h1V2H8ZM7 2h1V1H7Zm0 0"
+            />
           </svg>
         </LinkButton>
       </nav>
