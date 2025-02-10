@@ -13,7 +13,7 @@ const { href, className, ariaLabel, title, disabled = false } = Astro.props;
 <a
   href={disabled ? "#" : href}
   tabindex={disabled ? "-1" : "0"}
-  class={`group inline-block underline decoration-dotted underline-offset-4 hover:text-skin-accent hover:decoration-wavy
+  class={`group inline-block underline decoration-dashed underline-offset-4 hover:text-skin-accent hover:decoration-wavy
   ${className}`}
   aria-label={ariaLabel}
   title={title}

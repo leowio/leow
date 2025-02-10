@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://leow.io",
   author: "Leo Wang",
   desc: "Leo Wang's personal blog",
-  title: "leow.io",
+  title: "LEOW.IO",
   ogImage: "og.jpg",
   lightAndDarkMode: true,
   postPerPage: 4,
