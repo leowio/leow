@@ -19,32 +19,4 @@ export type SocialIcons = {
   [social in SocialMedia]: string;
 };
 
-export type SocialMedia =
-  | "Github"
-  | "Facebook"
-  | "Instagram"
-  | "LinkedIn"
-  | "Mail"
-  | "Twitter"
-  | "Twitch"
-  | "YouTube"
-  | "WhatsApp"
-  | "Snapchat"
-  | "Pinterest"
-  | "TikTok"
-  | "CodePen"
-  | "Discord"
-  | "GitLab"
-  | "Reddit"
-  | "Skype"
-  | "Steam"
-  | "Telegram"
-  | "Mastodon"
-  | "Bluesky";
-
-export type Project = {
-  title: string;
-  desc: string;
-  tech: string[];
-  href: string;
-};
+export type SocialMedia = "Github" | "Bluesky";

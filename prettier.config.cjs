@@ -1,9 +1,8 @@
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: [
-    require.resolve("prettier-plugin-tailwindcss"),
-    require.resolve("prettier-plugin-astro"),
-  ],
+  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  tailwindStylesheet: "./src/styles/base.css",
+  tailwindConfig: "./tailwind.config.cjs",
   overrides: [
     {
       files: "*.astro",
