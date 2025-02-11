@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "DinkieBitmap-7px";
-  src: url("/fonts/DinkieBitmap-7px.woff2") format("woff2");
+  src: url("/fonts/DinkieBitmap-7px.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "DinkieBitmap-9px";
-  src: url("/fonts/DinkieBitmap-9px.woff2") format("woff2");
+  src: url("/fonts/DinkieBitmap-9px.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
