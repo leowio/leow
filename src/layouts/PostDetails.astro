@@ -18,8 +18,7 @@ const { title, author, description, ogImage, canonicalURL, pubDatetime, tags } =
 
 const { Content } = await post.render();
 
-const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
-  .href;
+const ogUrl = ogImage ? new URL(ogImage, Astro.url.origin).href : undefined;
 ---
 
 <Layout
@@ -30,9 +29,9 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   canonicalURL={canonicalURL}
 >
   <Header />
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="mx-auto flex w-full max-w-3xl justify-start px-4">
     <button
-      class="focus-outline mb-2 mt-8 flex items-center hover:opacity-75"
+      class="focus-outline mb-2 mt-8 flex items-center opacity-70 hover:opacity-100"
       onclick="history.back()"
     >
       &lt; Go back

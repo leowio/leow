@@ -22,34 +22,21 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <h1>Hi I'm Ruofan (Leo) Wang</h1> &nbsp;
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
-          class="rss-icon"
-          ><path
-            d="M3 5h1V4h1V3H4V2H3ZM1 9h3V8H1ZM0 8h1V5H0Zm4 0h1V7H4ZM1 5h1V4H1Zm4 2h1V4H5v1H4v1h1Zm2-2h1V4H7ZM4 2h1V1H4Zm4 2h1V1H8ZM5 1h3V0H5Zm0 0"
-          ></path></svg
-        >
-      </a>
-
+    <section id="hero" class="flex flex-col gap-4 py-8">
+      <div class="flex flex-wrap items-center">
+        <h1 class="inline-block pr-2 text-3xl font-bold sm:text-5xl">
+          Hi I'm Ruofan (Leo) Wang
+        </h1>
+      </div>
       <p>
-        Loves Developing & Designing Software, living in New York, a CS student
+        Loves Coding, Urban Design & Transit. Living in New York. a CS student
         @NYU
       </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+          <div class="-mt-2 flex flex-wrap items-center">
+            <div class="whitespace-nowrap">Social Links:</div>
             <Socials />
           </div>
         )
@@ -61,8 +48,8 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>Featured</h2>
+          <section id="featured" class="py-8">
+            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
             <ul>
               {featuredPosts.map(({ data }) => (
                 <Card
@@ -78,8 +65,8 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
       )
     }
 
-    <section id="recent-posts">
-      <h2>Recent Posts</h2>
+    <section id="recent-posts" class="py-8">
+      <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
       <ul>
         {
           sortedPosts.map(
@@ -94,63 +81,11 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
           )
         }
       </ul>
-      <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
-          All Posts
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
-        </LinkButton>
+      <div class="mt-8 text-center">
+        <LinkButton href="/posts">All Posts</LinkButton>
       </div>
     </section>
   </main>
 
   <Footer noMarginTop />
 </Layout>
-
-<style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply my-8;
-  }
-  #hero h1 {
-    @apply inline-block text-3xl font-bold sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
-  }
-
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts,
-  #project {
-    @apply py-8;
-  }
-
-  #project {
-    @apply pb-4;
-  }
-
-  #featured h2,
-  #project h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
-  }
-  .all-posts-btn-wrapper {
-    @apply mt-8 text-center;
-  }
-</style>

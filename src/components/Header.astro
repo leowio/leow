@@ -5,7 +5,7 @@ import LinkButton from "./LinkButton.astro";
 ---
 
 <header class="w-full text-lg">
-  <div class="mx-auto flex max-w-3xl items-center gap-4 p-4">
+  <div class="mx-auto flex max-w-3xl flex-wrap items-center gap-4 p-4">
     <a href="/">
       <span>
         {SITE.title}
@@ -63,7 +63,7 @@ import LinkButton from "./LinkButton.astro";
           title="Toggles light & dark"
           aria-label="auto"
           aria-live="polite"
-          class="group"
+          class="group hover:text-skin-accent"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

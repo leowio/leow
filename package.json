@@ -21,7 +21,6 @@
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^8.0.1",
-    "satori": "^0.8.1",
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {

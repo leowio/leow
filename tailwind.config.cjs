@@ -51,8 +51,9 @@ module.exports = {
         transparent: "transparent",
       },
       fontFamily: {
-        main: ["DinkieBitmap-7px", "monospace"],
-        content: ["DinkieBitmap-9px", "monospace"],
+        main: ["DinkieBitmap-7px", "sans-serif"],
+        content: ["DinkieBitmap-9px", "sans-serif"],
+        code: ["DinkieBitmap-9px", "monospace"],
       },
     },
   },
