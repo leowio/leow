@@ -76,7 +76,7 @@ export default function SearchBar({ searchList }: Props) {
   return (
     <>
       <label className="relative block">
-        <span className="absolute inset-y-0 left-0 flex items-center pl-2 opacity-75">
+        <span className="absolute inset-y-0 left-0 flex items-center pl-3 opacity-75">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
             <path
               fill="currentColor"
@@ -85,7 +85,7 @@ export default function SearchBar({ searchList }: Props) {
           </svg>
         </span>
         <input
-          className="block w-full border-2 border-skin-fill border-opacity-40 bg-skin-fill py-3 pl-10 pr-3 placeholder:italic placeholder:text-opacity-75 focus:border-skin-accent focus:outline-none"
+          className="rounded-0 block w-full border-2 border-skin-fill border-opacity-40 bg-skin-fill py-3 pl-10 pr-3 font-content placeholder:italic placeholder:text-opacity-75 focus:border-skin-accent focus:outline-none"
           placeholder="Search for anything..."
           type="text"
           name="search"
