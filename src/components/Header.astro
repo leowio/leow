@@ -5,7 +5,7 @@ import LinkButton from "./LinkButton.astro";
 ---
 
 <header class="w-full text-lg">
-  <div class="mx-auto flex max-w-3xl flex-wrap items-center gap-4 p-4">
+  <div class="mx-auto flex max-w-3xl flex-wrap items-stretch gap-4 p-4">
     <a href="/">
       <span>
         {SITE.title}
@@ -45,7 +45,7 @@ import LinkButton from "./LinkButton.astro";
     </ul>
     <LinkButton
       href="/search"
-      className="focus-outline group sm:p-1"
+      className="focus-outline group"
       ariaLabel="search"
       title="Search"
     >
@@ -63,12 +63,13 @@ import LinkButton from "./LinkButton.astro";
           title="Toggles light & dark"
           aria-label="auto"
           aria-live="polite"
-          class="group hover:text-skin-accent"
+          class="hover:text-skin-accent"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 10 10"
             id="moon-svg"
+            class="mt-[1px]"
           >
             <path
               fill="currentColor"
@@ -79,6 +80,7 @@ import LinkButton from "./LinkButton.astro";
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 10 10"
             id="sun-svg"
+            class="mt-[1px]"
           >
             <path
               fill="currentColor"
