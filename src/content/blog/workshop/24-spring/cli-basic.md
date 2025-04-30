@@ -3,7 +3,6 @@ pubDatetime: 2024-03-01
 title: Intro to Command Line Interface
 postSlug: cli-basic
 tags:
-  - tamid
   - cli
   - workshop
   - university

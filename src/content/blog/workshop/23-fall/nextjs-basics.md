@@ -12,6 +12,7 @@ description: Building a to-do app, a counter app and refactoring the frameworks 
 marp: true
 theme: gaia
 class: invert
+draft: true
 ---
 
 <!-- _class: lead -->

@@ -4,7 +4,7 @@ pubDatetime: 2023-10-26
 title: Introduction to Web Development
 postSlug: tamid-web-dev-2023-fall
 featured: false
-draft: false
+draft: true
 tags:
   - university
   - tamid

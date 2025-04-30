@@ -7,7 +7,6 @@ tags:
   - web dev
   - workshop
   - university
-  - tamid
 description: In this workshop we will review what we learned about react by doing a project and get started with async JavaScript.
 ---
 

@@ -6,7 +6,6 @@ tags:
   - web dev
   - workshop
   - university
-  - tamid
 description: A workshop for beginners to learn the basics of React.
 ---
 
