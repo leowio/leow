@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://leow.io",
   author: "Leo Wang",
-  desc: "Leo Wang's personal blog",
+  desc: "Leo Wang | Software Engineer, Designer",
   title: "LEOW.IO",
   ogImage: "og.jpg",
   lightAndDarkMode: true,
