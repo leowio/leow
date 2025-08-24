@@ -13,4 +13,12 @@ export const blogSchema = z.object({
   canonicalURL: z.string().optional(),
 });
 
+export const projectSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  image: z.string(),
+  link: z.string(),
+  tags: z.array(z.string()).default(["others"]),
+});
+
 export type BlogFrontmatter = z.infer<typeof blogSchema>;
