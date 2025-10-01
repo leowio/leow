@@ -5,9 +5,13 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://leow.io/", // replace this with your deployed domain
+  // replace this with your deployed domain
+  site: "https://leow.io/",
+
   integrations: [
     tailwind({
       config: {
@@ -17,6 +21,7 @@ export default defineConfig({
     react(),
     sitemap(),
   ],
+
   markdown: {
     remarkPlugins: [
       remarkToc,
@@ -33,4 +38,7 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
+
+  output: "server",
+  adapter: netlify(),
 });
