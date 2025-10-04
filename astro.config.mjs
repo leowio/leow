@@ -5,8 +5,6 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 
-import netlify from "@astrojs/netlify";
-
 // https://astro.build/config
 export default defineConfig({
   // replace this with your deployed domain
@@ -39,6 +37,5 @@ export default defineConfig({
     extendDefaultPlugins: true,
   },
 
-  output: "server",
-  adapter: netlify(),
+  output: "static",
 });
