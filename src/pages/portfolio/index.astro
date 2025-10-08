@@ -6,6 +6,7 @@ import getSortedProject from "@utils/getSortedProject";
 import slugify from "@utils/slugify";
 
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 const projects = await getCollection("project");
 
@@ -69,10 +70,14 @@ const sortedProjects = getSortedProject(projects);
                   </LinkButton>
                 </ul>
               </div>
-              <img
+              <Image
                 src={data.image}
                 alt={data.title}
-                class="h-[128px] border-2 border-skin-accent"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                format="webp"
+                class="h-[128px] w-auto border-2 border-skin-accent"
               />
             </li>
           ))
