@@ -1,0 +1,84 @@
+---
+import LinkButton from "@components/LinkButton.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import getSortedProject from "@utils/getSortedProject";
+import slugify from "@utils/slugify";
+
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("project");
+
+const sortedProjects = getSortedProject(projects);
+---
+
+<Layout>
+  <main id="main-content" class="min-h-screen">
+    <section class="mt-8">
+      <LinkButton href="/"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+          ><path
+            fill="currentColor"
+            d="M1 9h7V5h1V3H8v1H1V3H0v2h1Zm1-1V5h5v3H6V6H3v2Zm2 0V7h1v1ZM1 3h1V2H1Zm6 0h1V0H5v1H2v1h4V1h1Zm0 0"
+          ></path></svg
+        ></LinkButton
+      >
+    </section>
+    <section id="introduction" class="mt-4 flex items-center gap-4">
+      <div
+        class="relative h-[256px] w-[256px] shrink-0 overflow-hidden border-b-2 border-skin-accent"
+      >
+        <img
+          src="/me.png"
+          alt="Leo Wang"
+          style="image-rendering: crisp-edges; image-rendering: pixelated;"
+          class="absolute left-1/2 top-0 min-w-[300px] -translate-x-1/2"
+          draggable="false"
+        />
+      </div>
+      <div>
+        <h1 class="text-2xl font-bold text-skin-accent">
+          Hi, I'm Ruofan (Leo) Wang
+        </h1>
+
+        <span class="font-content text-lg">
+          Passionate about building and maintaining large-scale applications
+          with a strong focus on user experience and visual design. I bridge the
+          gap between engineering and design to deliver intuitive, high-quality
+          products.
+        </span>
+      </div>
+    </section>
+    <section id="projects" class="py-8">
+      <h2 class="mb-4 text-2xl font-semibold tracking-wide text-skin-accent">
+        Projects
+      </h2>
+      <ul>
+        {
+          sortedProjects.map(({ data }) => (
+            <li class="mb-4 flex">
+              <div>
+                <a class="group relative inline-block text-lg text-skin-accent">
+                  <h2 class="text-xl text-skin-base">{data.title}</h2>
+                </a>
+                <p class="font-content">{data.description}</p>
+                <ul class="flex gap-2">
+                  <LinkButton href={data.link}>Go to Project</LinkButton>
+                  <LinkButton href={`/portfolio/${slugify(data)}`}>
+                    Read More
+                  </LinkButton>
+                </ul>
+              </div>
+              <img
+                src={data.image}
+                alt={data.title}
+                class="h-[128px] border-2 border-skin-accent"
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <Footer noMarginTop />
+</Layout>

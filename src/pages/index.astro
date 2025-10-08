@@ -6,6 +6,7 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
+import ProjectCard from "@components/ProjectCard";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -14,7 +15,6 @@ import { SOCIALS } from "@config";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const projects = await getCollection("project");
 
@@ -32,7 +32,7 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
       </div>
       <p>
         Loves Software Design / Engineering, Urban Design & Transit. Base in
-        Shanghai / NYC. CS student @NYU
+        Shanghai. CS student @NYU
       </p>
       {
         // only display if at least one social link is enabled
@@ -47,44 +47,68 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="py-8">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
+    <section id="projects" class="py-8">
+      <h2 class="text-2xl font-semibold tracking-wide">Projects</h2>
+      <ul>
+        {
+          projects
+            .slice(0, 4)
+            .map(({ data }) => (
+              <ProjectCard
+                href={`/portfolio/${slugify(data)}`}
+                frontmatter={data}
+              />
+            ))
+        }
+      </ul>
+      <div class="mt-8 text-center">
+        <LinkButton href="/portfolio"
+          ><span class="flex items-center gap-1"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 10 10"
+              class="w-6"
+              ><path
+                fill="currentColor"
+                d="M0 8h9V1H8V0H5v1h2v4H5v1h3v1H5V6H4v1H1V6h3V5H2V1h2V0H1v1H0Zm4-6h1V1H4Zm0 0"
+              ></path></svg
+            >Portfolio</span
+          ></LinkButton
+        >
+      </div>
+    </section>
+
+    <Hr />
 
     <section id="recent-posts" class="py-8">
       <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
       <ul>
         {
-          sortedPosts.map(
-            ({ data }, index) =>
-              index < 4 && (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              )
-          )
+          sortedPosts
+            .slice(0, 4)
+            .map(({ data }) => (
+              <Card
+                href={`/posts/${slugify(data)}`}
+                frontmatter={data}
+                secHeading={false}
+              />
+            ))
         }
       </ul>
       <div class="mt-8 text-center">
-        <LinkButton href="/posts">All Posts</LinkButton>
+        <LinkButton href="/posts"
+          ><span class="flex items-center gap-1"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 10 10"
+              class="w-6"
+              ><path
+                fill="currentColor"
+                d="M4 3h5V2H4ZM0 9h2V7H0Zm0-3h2V4H0Zm4 3h5V8H4ZM0 3h2V1H0Zm4 3h5V5H4Zm0 0"
+              ></path></svg
+            >All Posts</span
+          ></LinkButton
+        >
       </div>
     </section>
   </main>

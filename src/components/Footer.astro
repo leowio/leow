@@ -14,50 +14,56 @@ const { noMarginTop = false } = Astro.props;
   <Hr noPadding />
   <div class="footer-wrapper">
     <Socials centered />
-    <div class="copyright-wrapper">
-      <span
-        >Made with Astro & <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
-          ><path
-            fill="currentColor"
-            d="M4 9h1V8h1V7h1V6h1V5h1V2H8V1H6v1H5v1H4V2H3V1H1v1H0v3h1v1h1v1h1v1h1Zm0 0"
-          ></path></svg
-        > by Leo Wang</span
-      >
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span
-        >Released under <LinkButton
-          href="https://creativecommons.org/licenses/by-sa/4.0/"
+    <div class="flex flex-col">
+      <div>
+        <span
+          >Made with Astro & <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            ><path
+              fill="currentColor"
+              d="M4 9h1V8h1V7h1V6h1V5h1V2H8V1H6v1H5v1H4V2H3V1H1v1H0v3h1v1h1v1h1v1h1Zm0 0"
+            ></path></svg
+          > by Leo Wang</span
         >
-          CC BY-SA 4.0
-        </LinkButton></span
-      >
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <LinkButton href="/rss.xml" aria-label="rss feed" title="RSS Feed">
-        RSS
-      </LinkButton>
+        <span class="separator">&nbsp;|&nbsp;</span>
+        <span
+          >Released under <LinkButton
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+          >
+            CC BY-SA 4.0
+          </LinkButton></span
+        >
+        <span class="separator">&nbsp;|&nbsp;</span>
+        <LinkButton href="/rss.xml" aria-label="rss feed" title="RSS Feed">
+          RSS
+        </LinkButton>
+      </div>
+      <span>
+        Fonts licensed from <LinkButton href="https://dinkiebitmap.com/"
+          >Dinkie Bitmap</LinkButton
+        > and <LinkButton href="https://opendyslexic.org/"
+          >OpenDyslexic</LinkButton
+        >
+      </span>
+
+      <style>
+        footer {
+          @apply w-full;
+        }
+        .footer-wrapper {
+          @apply flex flex-col items-center justify-between py-6 md:flex-row-reverse md:py-4;
+        }
+        .link-button {
+          @apply my-1 p-2 hover:rotate-6;
+        }
+        .link-button svg {
+          @apply scale-125;
+        }
+        .separator {
+          @apply hidden md:inline;
+        }
+      </style>
     </div>
   </div>
 </footer>
-
-<style>
-  footer {
-    @apply w-full;
-  }
-  .footer-wrapper {
-    @apply flex flex-col items-center justify-between py-6 md:flex-row-reverse md:py-4;
-  }
-  .link-button {
-    @apply my-1 p-2 hover:rotate-6;
-  }
-  .link-button svg {
-    @apply scale-125;
-  }
-  .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap md:flex-row;
-  }
-  .separator {
-    @apply hidden md:inline;
-  }
-</style>

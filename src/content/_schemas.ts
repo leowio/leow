@@ -19,6 +19,8 @@ export const projectSchema = z.object({
   image: z.string(),
   link: z.string(),
   tags: z.array(z.string()).default(["others"]),
+  priority: z.number().optional(),
 });
 
 export type BlogFrontmatter = z.infer<typeof blogSchema>;
+export type ProjectFrontmatter = z.infer<typeof projectSchema>;
