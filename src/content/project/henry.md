@@ -1,6 +1,6 @@
 ---
 title: "Henry.social"
-description: "An AI-powered shopping assistant and cashback platform with over 100,000 users, built with Next.js, React Native, and Supabase."
+description: "An AI-powered shopping assistant and cashback platform with over 70,000 users, built with Next.js, React Native, and Supabase."
 image: "/projects/henry.png"
 link: "https://henry.social"
 tags:

@@ -6,30 +6,30 @@ const Portrait = () => {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
-    
+
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
-    
+
     const xPercent = x / rect.width;
-    
-    const photoNumber = Math.floor(Math.max(0, xPercent) * 12) + 1;
+
+    const photoNumber = Math.floor(Math.max(0, xPercent) * 12);
     setImageNumber(photoNumber);
   };
 
   const getImageSrc = () => {
-    return `/portrait/pixel_art_large-${imageNumber}.png`;
+    return `/portrait/pixel-${imageNumber}.jpeg`;
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className="relative h-[256px] w-[232px] shrink-0 overflow-hidden border-2 border-skin-accent cursor-pointer"
+      className="relative h-[256px] w-[232px] shrink-0 cursor-pointer overflow-hidden border-2 border-skin-accent"
       onMouseMove={handleMouseMove}
     >
-      <img 
-        src={getImageSrc()} 
-        alt="Leo Wang" 
-        className="absolute left-1/2 top-0 min-w-[256px] -translate-x-1/2 transition-all duration-200" 
+      <img
+        src={getImageSrc()}
+        alt="Leo Wang"
+        className="absolute left-1/2 top-0 min-w-[256px] -translate-x-1/2 transition-all duration-200"
         style={{
           imageRendering: "crisp-edges",
         }}
@@ -37,6 +37,6 @@ const Portrait = () => {
       />
     </div>
   );
-}
- 
+};
+
 export default Portrait;

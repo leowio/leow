@@ -32,12 +32,12 @@ function getPreferFont() {
 
 let fontValue = getPreferFont();
 
-function setPreference() {
+function setFontPreference() {
   localStorage.setItem("font", fontValue);
-  reflectPreference();
+  reflectFontPreference();
 }
 
-function reflectPreference() {
+function reflectFontPreference() {
   const config = fontConfigs[fontValue];
   if (config) {
     document.documentElement.style.setProperty("--font-main", config.main);
@@ -59,27 +59,27 @@ function reflectPreference() {
 }
 
 // set early so no page flashes / CSS is made aware
-reflectPreference();
+reflectFontPreference();
 
-window.onload = () => {
+window.addEventListener("load", () => {
   // set on load so screen readers can get the latest value on the buttons
-  reflectPreference();
+  reflectFontPreference();
 
   // now this script can find and listen for clicks on the font controls
   document.querySelector("#select-dinkie")?.addEventListener("click", () => {
     fontValue = "dinkie";
-    setPreference();
+    setFontPreference();
   });
 
   document
     .querySelector("#select-opendyslexic")
     ?.addEventListener("click", () => {
       fontValue = "opendyslexic";
-      setPreference();
+      setFontPreference();
     });
 
   document.querySelector("#select-sans")?.addEventListener("click", () => {
     fontValue = "sans";
-    setPreference();
+    setFontPreference();
   });
-};
+});
