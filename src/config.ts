@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Leo Wang",
   desc: "Leo Wang | Software Engineer, Designer",
   title: "LEOW.IO",
-  ogImage: "og.jpg",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerPage: 4,
 };
