@@ -1,0 +1,35 @@
+---
+import Image from "astro/components/Image.astro";
+
+export interface Props {
+  images: string[];
+  alt?: string;
+  className?: string;
+  imageClassName?: string;
+}
+
+const {
+  images,
+  alt = "Image stack",
+  className = "",
+  imageClassName = "",
+} = Astro.props;
+---
+
+<div class={`flex w-full max-w-screen-md ${className}`}>
+  {
+    images.map((image, index) => (
+      <div class="min-w-0 overflow-hidden transition-all hover:shrink-0">
+        <Image
+          src={image}
+          alt={`${alt} ${index + 1}`}
+          width={456}
+          height={256}
+          loading="lazy"
+          format="webp"
+          class={`min-w-[456px] ${imageClassName}`}
+        />
+      </div>
+    ))
+  }
+</div>

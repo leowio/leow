@@ -111,6 +111,32 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
         >
       </div>
     </section>
+    <Hr />
+    <section id="bsky" class="py-8">
+      <h2 class="text-2xl font-semibold tracking-wide">My Bluesky</h2>
+      <bsky-embed
+        username="leow.io"
+        limit="3"
+        custom-styles=`
+                        *{
+                          font-family: var(--font-main);}
+                          article {border-style: dashed; border-color: rgba(var(--color-accent)) !important; border-bottom-width: 2px !important;}
+                          img {height:256px; width:auto; border-radius:0px !important; border-color: rgba(var(--color-accent)) !important; border-width: 2px !important;}
+                          video {height:256px; width:auto; border-radius:0px !important; border-color: rgba(var(--color-accent)) !important; border-width: 2px !important;}
+                          div.grid {
+                            display: flex;
+                            width: 100%;
+                            overflow-x: scroll;
+                            :is(& > *) {
+                              flex-shrink: 0
+                            }
+                            :is(& > *) {
+                              flex-shrink: 0;
+                            }
+                          }
+                        `
+      ></bsky-embed>
+    </section>
   </main>
 
   <Footer noMarginTop />

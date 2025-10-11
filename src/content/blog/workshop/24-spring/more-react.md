@@ -66,7 +66,6 @@ Now that we have a to-do list, let's move on to the next topic.
 ### Different ways of client-server communication
 
 - **Protocol**: a set of rules that governs how data is transferred between two parties
-
   - HTTP: HyperText Transfer Protocol
   - HTTPS: HTTP + Secure
   - WebSockets: a protocol that allows for two-way communication between client and server
