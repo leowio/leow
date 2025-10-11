@@ -1,0 +1,24 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import ProjectDetails from "@layouts/ProjectDetails.astro";
+import slugify from "@utils/slugify";
+
+export interface Props {
+  project: CollectionEntry<"project">;
+}
+
+export async function getStaticPaths() {
+  const project = await getCollection("project");
+
+  const postResult = project.map((project) => ({
+    params: { slug: slugify(project.data) },
+    props: { project },
+  }));
+
+  return [...postResult];
+}
+
+const { project } = Astro.props;
+---
+
+<ProjectDetails project={project} />

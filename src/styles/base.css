@@ -40,7 +40,7 @@
 }
 @font-face {
   font-family: "OpenDyslexic";
-  src: url("/fonts/OpenDyslexic-BoldItalic.woff2") format("woff2");
+  src: url("/fonts/OpenDyslexic-Bold-Italic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
   font-display: swap;

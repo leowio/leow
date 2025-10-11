@@ -1,0 +1,59 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Footer from "@components/Footer.astro";
+import Tag from "@components/Tag.astro";
+import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@utils/slugify";
+import LinkButton from "@components/LinkButton.astro";
+import Header from "@components/Header.astro";
+
+export interface Props {
+  project: CollectionEntry<"project">;
+}
+
+const { project } = Astro.props;
+
+const { title, description, link, tags } = project.data;
+
+const { Content } = await project.render();
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <div class="mx-auto flex w-full max-w-3xl justify-start px-4">
+    <button
+      class="focus-outline mb-2 mt-8 flex items-center opacity-70 hover:opacity-100"
+      onclick="history.back()"
+    >
+      &lt; Go back
+    </button>
+  </div>
+  <main id="main-content">
+    <h1 class="post-title">{title}</h1>
+
+    <div class="mt-2 flex gap-2">
+      <LinkButton href={link}>Go to Project</LinkButton>
+    </div>
+
+    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+      <Content />
+    </article>
+
+    <ul class="tags-container">
+      {tags.map((tag) => <Tag name={slugifyStr(tag)} />)}
+    </ul>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+  }
+  .post-title {
+    @apply text-2xl font-semibold text-skin-accent;
+  }
+  .tags-container {
+    @apply my-8;
+  }
+</style>

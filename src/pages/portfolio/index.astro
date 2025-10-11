@@ -8,57 +8,21 @@ import slugify from "@utils/slugify";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Portrait from "@components/Portrait";
+import Main from "@layouts/Main.astro";
+import Header from "@components/Header.astro";
 
 const projects = await getCollection("project");
 
 const sortedProjects = getSortedProject(projects);
 ---
 
-<Layout>
-  <main id="main-content" class="min-h-screen">
-    <section class="mt-8 flex gap-2">
-      <LinkButton href="/"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
-          ><path
-            fill="currentColor"
-            d="M1 9h7V5h1V3H8v1H1V3H0v2h1Zm1-1V5h5v3H6V6H3v2Zm2 0V7h1v1ZM1 3h1V2H1Zm6 0h1V0H5v1H2v1h4V1h1Zm0 0"
-          ></path></svg
-        ></LinkButton
-      >
-      <button
-        id="theme-btn"
-        title="Toggles light & dark"
-        aria-label="auto"
-        aria-live="polite"
-        class="hover:text-skin-accent"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
-          id="moon-svg"
-          class="mt-[1px]"
-        >
-          <path
-            fill="currentColor"
-            d="M5 4H4v1h1Zm0 0h1V1h1V0H5ZM1 8h1V7H1Zm1 1h4V8H2ZM0 7h1V6h3V5H0Zm6 1h1V7H6Zm1-1h1V6H7Zm1-1h1V2H8ZM7 2h1V1H7Zm0 0"
-          ></path>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
-          id="sun-svg"
-          class="mt-[1px]"
-        >
-          <path
-            fill="currentColor"
-            d="M3 3H2v3h1Zm0 0h3V2H3ZM1 8h1V7H1ZM0 5h1V4H0Zm4 4h1V8H4ZM3 7h3V6H3ZM1 2h1V1H1Zm6 6h1V7H7ZM6 6h1V3H6ZM4 1h1V0H4Zm4 4h1V4H8ZM7 2h1V1H7Zm0 0"
-          ></path>
-        </svg>
-      </button>
-    </section>
+<Layout title="Portfolio | Leo Wang">
+  <Header />
+
+  <Main pageTitle="Portfolio" pageDesc="My works <3">
     <section
       id="introduction"
-      class="mt-8 flex flex-col items-center gap-8 md:flex-row"
+      class="flex flex-col items-center gap-8 md:flex-row"
     >
       <Portrait client:load />
       <div>
@@ -81,7 +45,7 @@ const sortedProjects = getSortedProject(projects);
       <ul>
         {
           sortedProjects.map(({ data }) => (
-            <li class="mb-4 flex flex-col-reverse md:flex-row">
+            <li class="mb-4 flex flex-col-reverse gap-2 md:flex-row">
               <div>
                 <h2 class="text-xl text-skin-base">{data.title}</h2>
                 <p class="font-content">{data.description}</p>
@@ -106,6 +70,6 @@ const sortedProjects = getSortedProject(projects);
         }
       </ul>
     </section>
-  </main>
+  </Main>
+  <Footer noMarginTop />
 </Layout>
-<Footer noMarginTop />
