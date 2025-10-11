@@ -114,10 +114,11 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
     <Hr />
     <section id="bsky" class="py-8">
       <h2 class="text-2xl font-semibold tracking-wide">My Bluesky</h2>
-      <bsky-embed
-        username="leow.io"
-        limit="3"
-        custom-styles=`
+      <div class="scroll-bar-disabled max-h-[512px] overflow-y-auto pt-4">
+        <bsky-embed
+          username="leow.io"
+          limit="3"
+          custom-styles=`
                         *{
                           font-family: var(--font-main);}
                           article {border-style: dashed; border-color: rgba(var(--color-accent)) !important; border-bottom-width: 2px !important;}
@@ -135,7 +136,8 @@ const socialCount = SOCIALS.filter((social) => social.active).length;
                             }
                           }
                         `
-      ></bsky-embed>
+        ></bsky-embed>
+      </div>
     </section>
   </main>
 

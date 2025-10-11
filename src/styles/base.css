@@ -156,6 +156,12 @@ body {
   }
 }
 
+.scroll-bar-disabled {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
 @layer components {
   .display-none {
     @apply hidden !important;
