@@ -1,4 +1,3 @@
-import Datetime from "./Datetime";
 import type { ProjectFrontmatter } from "@content/_schemas";
 
 export interface Props {

@@ -31,9 +31,13 @@ const { Content } = await project.render();
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
 
-    <div class="mt-2 flex gap-2">
-      <LinkButton href={link}>Go to Project</LinkButton>
-    </div>
+    {
+      link && (
+        <div class="mt-2 flex gap-2">
+          <LinkButton href={link}>Go to Project</LinkButton>
+        </div>
+      )
+    }
 
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />

@@ -5,23 +5,33 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import SearchBar from "@components/Search";
+import SearchBar, { type SearchItem } from "@components/Search";
 
 // Retrieve all articles
 const posts = await getCollection("blog", ({ data }) => !data.draft);
+const projects = await getCollection("project");
 
-// List of items to search in
-const searchList = posts.map(({ data }) => ({
-  title: data.title,
-  description: data.description,
-  data,
-}));
+// List of items to search in, with a type key to indicate post or project
+const searchList = [
+  ...posts.map(({ data }) => ({
+    title: data.title,
+    description: data.description,
+    data,
+    type: "post",
+  })),
+  ...projects.map(({ data }) => ({
+    title: data.title,
+    description: data.description,
+    data,
+    type: "project",
+  })),
+];
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="search" />
   <Main pageTitle="Search" pageDesc="Search any article ...">
-    <SearchBar client:load searchList={searchList} />
+    <SearchBar client:load searchList={searchList as SearchItem[]} />
   </Main>
   <Footer />
 </Layout>

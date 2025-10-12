@@ -1,10 +1,14 @@
 import { slugifyStr } from "./slugify";
 import type { CollectionEntry } from "astro:content";
 
-const getUniqueTags = (posts: CollectionEntry<"blog">[]) => {
-  const filteredPosts = posts.filter(({ data }) => !data.draft);
-  const tags: string[] = filteredPosts
-    .flatMap((post) => post.data.tags)
+const getUniqueTags = (
+  entries: CollectionEntry<"blog">[] | CollectionEntry<"project">[],
+) => {
+  const filteredEntries = entries.filter(({ data }) =>
+    "draft" in data ? !data.draft : true,
+  );
+  const tags: string[] = filteredEntries
+    .flatMap((entry) => entry.data.tags)
     .map((tag) => slugifyStr(tag))
     .filter(
       (value: string, index: number, self: string[]) =>
