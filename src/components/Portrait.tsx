@@ -33,6 +33,7 @@ const Portrait = () => {
             zIndex: index === imageNumber ? 10 : 1,
           }}
           draggable="false"
+          loading="eager"
         />
       ))}
     </div>
