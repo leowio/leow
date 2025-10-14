@@ -120,7 +120,7 @@ export default function SearchBar({ searchList }: Props) {
               />
             ) : (
               <ProjectCard
-                href={`/projects/${slugify(item.data)}`}
+                href={`/portfolio/${slugify(item.data)}`}
                 frontmatter={item.data as ProjectFrontmatter}
                 key={`${refIndex}-${slugify(item.data)}`}
               />

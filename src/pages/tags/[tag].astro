@@ -61,7 +61,7 @@ const sortTagsPost = getSortedPosts(tagPosts as CollectionEntry<"blog">[]);
       {
         tagProjects.map(({ data }) => (
           <ProjectCard
-            href={`/projects/${slugify(data)}`}
+            href={`/portfolio/${slugify(data)}`}
             frontmatter={data as ProjectFrontmatter}
           />
         ))
