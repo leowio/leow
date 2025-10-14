@@ -14,6 +14,10 @@ import Header from "@components/Header.astro";
 const projects = await getCollection("project");
 
 const sortedProjects = getSortedProject(projects);
+
+const EngineeringProjects = sortedProjects.filter((project) =>
+  project.data.tags.includes("Engineering")
+);
 ---
 
 <Layout title="Portfolio | Leo Wang">
@@ -40,12 +44,12 @@ const sortedProjects = getSortedProject(projects);
     </section>
     <section id="projects" class="py-8">
       <h2 class="mb-4 text-2xl font-semibold tracking-wide text-skin-accent">
-        Projects
+        Engineering Projects
       </h2>
       <ul>
         {
-          sortedProjects.map(({ data }) => (
-            <li class="mb-4 flex flex-col-reverse gap-2 md:flex-row">
+          EngineeringProjects.map(({ data }) => (
+            <li class="mb-8 flex flex-col-reverse gap-2 md:flex-row">
               <div>
                 <h2 class="text-xl text-skin-base">{data.title}</h2>
                 <p class="font-content">{data.description}</p>
