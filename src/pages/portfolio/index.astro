@@ -10,6 +10,7 @@ import { Image } from "astro:assets";
 import Portrait from "@components/Portrait";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
+import Hr from "@components/Hr.astro";
 
 const projects = await getCollection("project");
 
@@ -17,6 +18,10 @@ const sortedProjects = getSortedProject(projects);
 
 const EngineeringProjects = sortedProjects.filter((project) =>
   project.data.tags.includes("Engineering")
+);
+
+const ArtsAndCraftsProjects = sortedProjects.filter((project) =>
+  project.data.tags.includes("Arts & Crafts")
 );
 ---
 
@@ -35,14 +40,13 @@ const EngineeringProjects = sortedProjects.filter((project) =>
         </h1>
 
         <span class="font-content text-lg">
-          Passionate about building and maintaining large-scale applications
-          with a strong focus on user experience and visual design. I bridge the
-          gap between engineering and design to deliver intuitive, high-quality
-          products.
+          Passionate about building applications with a strong focus on user
+          experience and visual design. I bridge the gap between engineering and
+          design to deliver intuitive, high-quality experiences.
         </span>
       </div>
     </section>
-    <section id="projects" class="py-8">
+    <section id="engineering-projects" class="pt-8">
       <h2 class="mb-4 text-2xl font-semibold tracking-wide text-skin-accent">
         Engineering Projects
       </h2>
@@ -51,7 +55,12 @@ const EngineeringProjects = sortedProjects.filter((project) =>
           EngineeringProjects.map(({ data }) => (
             <li class="mb-8 flex flex-col-reverse gap-2 md:flex-row">
               <div>
-                <h2 class="text-xl text-skin-base">{data.title}</h2>
+                <a
+                  href={`/portfolio/${slugify(data)}`}
+                  class="text-xl text-skin-accent decoration-dashed decoration-2 underline-offset-4 hover:underline"
+                >
+                  {data.title}
+                </a>
                 <p class="font-content">{data.description}</p>
                 <ul class="flex gap-2">
                   {data.link && (
@@ -71,6 +80,45 @@ const EngineeringProjects = sortedProjects.filter((project) =>
                 format="webp"
                 class="h-auto w-[256px] self-center border-2 border-skin-accent md:h-[128px] md:w-auto"
               />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <Hr />
+    <section id="arts-and-crafts-projects" class="pt-8">
+      <h2
+        class="mb-4 text-right text-2xl font-semibold tracking-wide text-skin-accent"
+      >
+        Arts & Crafts Projects
+      </h2>
+      <ul class="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {
+          ArtsAndCraftsProjects.map(({ data }) => (
+            <li class="mb-8 flex flex-col-reverse gap-2 md:flex-row">
+              <div class="flex flex-col gap-2">
+                <Image
+                  src={data.image}
+                  alt={data.title}
+                  width={800}
+                  height={800}
+                  loading="eager"
+                  format="webp"
+                  class="h-auto w-[256px] self-center border-2 border-skin-accent"
+                />
+                <a
+                  href={`/portfolio/${slugify(data)}`}
+                  class="text-xl text-skin-accent decoration-dashed decoration-2 underline-offset-4 hover:underline"
+                >
+                  {data.title}
+                </a>
+                <p class="font-content">{data.description}</p>
+                <ul class="flex gap-2">
+                  <LinkButton href={`/portfolio/${slugify(data)}`}>
+                    Read More
+                  </LinkButton>
+                </ul>
+              </div>
             </li>
           ))
         }
