@@ -59,13 +59,13 @@ The main files are `server.js` (game state, scoring engine, Socket.IO events), `
 All scoring parameters are configurable in the `scoringConfig` object in `server.js`:
 
 ```javascript
-hunterPointsPerPlayerInCircle: 10    // Hunter pts/sec per caught survivor
-survivorProximityMaxDistance: 100     // Max distance (m) for proximity bonus
-survivorProximityMaxPoints: 5        // Max survivor pts/sec per pair
-survivorProximityFormula: "linear"   // "linear" | "quadratic" | "exponential"
-hunterCircleRadius: 30               // Detection circle radius (m)
-maxHunterCircles: 3                  // Max simultaneous circles
-hunterCircleCooldownMs: 1000         // Cooldown between placements
-hunterCircleMaxRange: 70             // Max placement distance from hunter (m)
-hunterPlayerUpdateIntervalMs: 20000  // Hunter receives positions every 20s
+hunterPointsPerPlayerInCircle: 10; // Hunter pts/sec per caught survivor
+survivorProximityMaxDistance: 100; // Max distance (m) for proximity bonus
+survivorProximityMaxPoints: 5; // Max survivor pts/sec per pair
+survivorProximityFormula: "linear"; // "linear" | "quadratic" | "exponential"
+hunterCircleRadius: 30; // Detection circle radius (m)
+maxHunterCircles: 3; // Max simultaneous circles
+hunterCircleCooldownMs: 1000; // Cooldown between placements
+hunterCircleMaxRange: 70; // Max placement distance from hunter (m)
+hunterPlayerUpdateIntervalMs: 20000; // Hunter receives positions every 20s
 ```
